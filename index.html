@@ -51,7 +51,7 @@
             flex: 1;
         }
         .content {
-            max-width: 800px; /* Centering the content on larger screens */
+            max-width: 800px;
             margin: 0 auto;
         }
         .card {
@@ -68,21 +68,21 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            justify-content: center; /* Center the profile items horizontally */
+            justify-content: center;
         }
         
         .profile-item {
             background-color: #333;
             border-radius: 8px;
             padding: 10px;
-            text-align: center; /* Center the text horizontally */
+            text-align: center;
             width: 150px;
             text-decoration: none;
             color: #e0e0e0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center; /* Center the content vertically */
+            justify-content: center;
         }
         
         .profile-item img {
@@ -94,7 +94,7 @@
         
         .profile-item p {
             margin: 10px 0 0;
-            text-align: center; /* Center the text horizontally */
+            text-align: center;
         }
         
         .profile-item:hover {
@@ -115,6 +115,14 @@
     </style>
 </head>
 <body>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="https://github.com/FreakyObservatory/FreakyObservatory/raw/main/freak.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script>
+        document.getElementById('backgroundMusic').volume = 0.6;
+    </script>
+
     <header>
         <h1>Freaky Observatory Wiki</h1>
     </header>
@@ -131,27 +139,22 @@
                 <p>Below you can see our profiles I guess.</p>
             </div>
             
-            <!-- New Profile List Card -->
             <div class="card">
                 <h2>Members</h2>
                 <p>All pfps are updated as of 8/10/2024</p>
                 <div class="profile-list">
-                    <!-- Profile Item 1 -->
                     <a href="members/hamster.html" class="profile-item">
                         <img src="https://cdn.discordapp.com/avatars/926181954641092618/d0fd610d18b0618f652d6ca4199435a3" alt="Hamster's pfp">
                         <p>Hamster</p>
                     </a>
-                    <!-- Profile Item 2 -->
                     <a href="members/paui.html" class="profile-item">
                         <img src="https://cdn.discordapp.com/avatars/1263701426413244428/e2bd9be3d2d1b8812cd4304fd4e65f09" alt="Paui's pfp">
                         <p>Paui</p>
                     </a>
-                    <!-- Profile Item 3 -->
                     <a href="#" class="profile-item">
                         <img src="https://cdn.discordapp.com/avatars/739202994486247494/cdddcce9906b858205fe20e317759566" alt="Nikko's pfp">
                         <p>Nikko</p>
                     </a>
-                    <!-- Profile Item 4 -->
                     <a href="#" class="profile-item">
                         <img src="https://cdn.discordapp.com/avatars/1093451189221335040/fdf770788f7496373eccc41d8b3bfa77" alt="Timo's pfp">
                         <p>Timo</p>
