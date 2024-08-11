@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Member Profile - Paui</title>
+    <title>Member Profile - Hamster</title>
     <style>
         body {
             background-color: #121212;
@@ -70,16 +70,14 @@
             width: 100%;
             position: relative; /* For positioning the tooltip */
         }
+        
         .profile img {
             border-radius: 50%;
             margin-bottom: 20px;
             width: 150px;
             height: 150px;
-            /* Removed cursor: pointer; */
         }
-        .profile-info {
-            text-align: center;
-        }
+        
         .tooltip {
             position: absolute;
             bottom: 100%; /* Position above the image */
@@ -95,9 +93,13 @@
             transition: opacity 0.3s;
             z-index: 10;
         }
-        .profile:hover .tooltip {
+        
+        .profile img:hover + .tooltip {
             visibility: visible;
             opacity: 1;
+        }
+        .profile-info {
+            text-align: center;
         }
         @media (min-width: 600px) {
             .profile {
