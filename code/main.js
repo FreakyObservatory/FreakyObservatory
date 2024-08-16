@@ -940,7 +940,6 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function (e) {
             window.localStorage.setItem(Ya, JSON.stringify(e))
         }(o)
     }
-
     var Qa = document.createElement("template");
     Qa.innerHTML = '\n<button id="reveal">reveal</button>\n<button id="shake">shake</button>\n<button id="bounce">bounce</button>\n<button id="toast">toast</button>\n<button id="modal">modal</button>\n';
     var Za = "IN_PROGRESS", es = "WIN", as = "FAIL",
@@ -1686,6 +1685,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function (e) {
                         As(function (e) {
                             var a = e.evaluations, s = e.dayOffset, t = e.rowIndex, o = e.isHardMode, n = e.isWin,
                                 r = JSON.parse(window.localStorage.getItem(j)),
+                                i = JSON.parse(window.localStorage.getItem(S)), l = "Wordle unlimited.";
                             l += "\n".concat(n ? t : "X", "/").concat(6), o && (l += "*");
                             var d = "";
                             return a.forEach((function (e) {
