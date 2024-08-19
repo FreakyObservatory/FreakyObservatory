@@ -6,6 +6,7 @@
     <title>Member Profile - Theo</title>
     <link rel="icon" href="https://cdn.discordapp.com/icons/861860325561335808/94842aeb95b4bf1c62f2ecd2885d8459.png?size=1024" type="image/png">
     <style>
+        /* General Styles */
         body {
             background-color: #121212;
             color: #e0e0e0;
@@ -148,6 +149,34 @@
         footer p {
             margin: 0;
         }
+
+        /* Play Button Styles */
+        .play-button {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #333;
+            color: #e0e0e0;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            z-index: 100;
+        }
+
+        .play-button:active {
+            background-color: #1f8b4c;
+        }
+
+        /* Show the play button on mobile */
+        @media (max-width: 768px) {
+            .play-button {
+                display: block;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -202,5 +231,29 @@
     <footer>
         <p>&copy; 2024 | 𝓯𝓻𝓮𝓪𝓴𝔂 👅👅 Observatory</p>
     </footer>
+
+    <audio id="background-audio" loop>
+        <source src="https://github.com/FreakyObservatory/FreakyObservatory/raw/main/media/theoidontwantajob.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button class="play-button" onclick="playAudio()">Play Music</button>
+    
+    <script>
+        function playAudio() {
+            var audio = document.getElementById('background-audio');
+            audio.volume = 0.5;
+            audio.play();
+            document.querySelector('.play-button').style.display = 'none';
+        }
+
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('background-audio');
+            audio.volume = 0.20;
+            audio.play().catch(function() {
+                document.querySelector('.play-button').style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
